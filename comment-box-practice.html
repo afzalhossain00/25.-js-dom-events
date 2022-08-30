@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice comment box</title>
+</head>
+
+<body>
+    <h1>See All Your Comment</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus incidunt excepturi tempore nulla harum
+            architecto at fugiat? Vero, dignissimos fuga! Maiores ab magnam consectetur dicta distinctio vero! Nisi
+            nulla odio voluptatum, accusamus tempore harum qui ex quaerat reiciendis cum debitis?</p>
+        <p>Sit, deleniti? Ipsum non, aspernatur esse ab ipsa corrupti, eaque explicabo laudantium at dolores expedita?
+            Enim dolores quo odit tenetur commodi iusto eos optio itaque mollitia ratione et nihil facere expedita
+            blanditiis ipsa beatae possimus repellendus, ea ut ex dolor.</p>
+        <p>Ad accusantium nemo recusandae odit placeat sit ea atque ipsum odio, ratione neque nesciunt exercitationem.
+            Modi porro enim, alias unde iusto odit laudantium cum eos saepe nulla ex cupiditate nobis molestias possimus
+            voluptas quis repellendus, praesentium nam eveniet hic corporis?</p>
+    </div>
+
+    <div>
+        <textarea name="" id="new-comment" cols="50" rows="6"></textarea> <br>
+        <button id="btn-post">Post</button>
+    </div>
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function () {
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+
+            commentBox.value = '';
+        });
+    </script>
+</body>
+
+</html>

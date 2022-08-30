@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+</head>
+
+<body>
+    <h1 onclick="console.log('I am clicked')">Dom er ajke special events</h1>
+    <button title="This is sample text" onclick="console.log(20)">Click Me</button>
+    <button onclick="console.log(10)">Another Click</button>
+    <br>
+    <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
+    <!-- option 2 -->
+    <button onclick="makeRed()">Make Red</button>
+    <!-- option 3 -->
+    <button id="make-blue">Make blue</button>
+    <button id="make-purple">Make Purple</button>
+    <button onclick="document.body.style.backgroundColor= 'tomato'">Make tomato</button>
+    <button id="make-pink">Make Pink</button>
+    <button id="make-green">Make Green</button>
+    <button id="make-goldenrod">Make GoldenRod</button>
+    <button id="make-grey">Make Grey</button>
+
+    <button onclick="makeBlack()">Make Black</button>
+    <script src="js/events.js"></script>
+    <script>
+        function makeBlack() {
+            document.body.style.backgroundColor = 'black'
+        }
+
+        document.getElementById('make-grey').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'grey'
+        })
+
+    </script>
+</body>
+
+</html>
